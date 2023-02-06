@@ -25,3 +25,9 @@ def document(request):
 
 def category(request):
     return render(request, 'category.html')
+
+def info(request):
+    return render(request, 'info.html')
+
+def about(request):
+    return render(request, 'about.html')
