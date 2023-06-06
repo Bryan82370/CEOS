@@ -6,6 +6,9 @@ from django.shortcuts import render, redirect
 from .models import Utilisateur
 from django.contrib import messages
 from .forms import ConnexionForm
+from django.views.decorators.cache import never_cache
+from django.views.decorators.cache import cache_control
+from django.core.cache import cache
 
 @login_required(login_url='choise')
 def index(request):
@@ -74,4 +77,5 @@ def list(request):
 
 def logout_view(request):
     logout(request)
+    cache.clear()
     return redirect('choise')
