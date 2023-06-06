@@ -74,4 +74,4 @@ def list(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('choise')  # Redirection vers la page de connexion après la déconnexion
+    return redirect('choise')

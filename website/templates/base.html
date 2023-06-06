@@ -35,16 +35,22 @@
                     </li>
                 </ul>
 
-                <h3>Bienvenue {{ user.username }} </h3>
-
                 <form class="d-flex">
-                    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/register">S'inscrire</a>
-                    <a class="btn btn-success my-2 my-sm-0" type="submit" href="/login">Connecter</a>
-                    <a class="btn btn-success my-2 my-sm-0" type="submit" href="{% url 'choise' %}">Déconnexion</a>
+                    {% if user.username == null  %}
+                        <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/register">S'inscrire</a>
+                        <a class="btn btn-success my-2 my-sm-0" type="submit" href="/login">Connecter</a>
+                    {% else %}
+                        <a class="btn btn-success my-2 my-sm-0" type="submit" href="{% url 'choise' %}">Déconnexion</a>
+                    {% endif %}
                 </form>
             </div>
         </div>
     </nav>
+
+    {% if user.username != null  %}
+    <h3>Bienvenue {{ user.username }} </h3>
+    {% endif %}
+
     {% endblock %}
     {% block content %}
     {% endblock %}
