@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
 {% extends "base.html" %}
 {% load static %}
 <meta charset="utf-8" />
+{% block content %}
+  <h1>Retouvez tous vos fichiers</h1>
+    for file in files:
+  <ul id="{file.name}">
+    <li>
+        <div>file.name</div>
+        <div>file.date_export</div>
+        <a class="nav-link" href="/my_file" role="button" aria-haspopup="true" aria-expanded="false">Voir</a>
+    </li>
+  </ul>
+
+{% endblock %}
+
+</html>
