@@ -12,7 +12,7 @@
         {% block sidebar %}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">TASKMASTER</a>
+              <a class="navbar-brand" href="/welcome">TASKMASTER</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -22,7 +22,7 @@
                         <a class="nav-link" href="/document" role="button" aria-haspopup="true" aria-expanded="false">Mes Fichiers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/step" role="button" aria-haspopup="true" aria-expanded="false">Mes DÃ©marches</a>
+                        <a class="nav-link" href="/step" role="button" aria-haspopup="true" aria-expanded="false">Mes Démarches</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="/list" role="button" aria-haspopup="true" aria-expanded="false">Ma Liste</a>
@@ -46,10 +46,6 @@
             </div>
         </div>
     </nav>
-
-    {% if user.username != null  %}
-    <h3>Bienvenue {{ user.username }} </h3>
-    {% endif %}
 
     {% endblock %}
     {% block content %}

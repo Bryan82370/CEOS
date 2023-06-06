@@ -15,4 +15,8 @@ urlpatterns = [
     path('list/', views.list, name='list'),
     path('choise/', views.choise, name='choise'),
     path('logout/', logout_view, name='logout'),
+    path('welcome/', views.welcome, name='welcome'),
+    path('see_file/', views.see_file, name='see_file'),
+
+
 ]

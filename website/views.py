@@ -50,11 +50,11 @@ def addCategory(request):
 
 @login_required(login_url='choise')
 def addDocument(request):
-    return render(request, 'addDocument.html')
+    return render(request, 'documents/addDocument.html')
 
 @login_required(login_url='choise')
 def document(request):
-    return render(request, 'document.html')
+    return render(request, 'documents/document.html')
 
 @login_required(login_url='choise')
 def step(request):
@@ -75,3 +75,11 @@ def list(request):
 def logout_view(request):
     logout(request)
     return redirect('choise')
+
+@login_required(login_url='choise')
+def welcome(request):
+    return render(request, 'welcome.html')
+
+@login_required(login_url='choise')
+def see_file(request):
+    return render(request, 'documents/see_file.html')

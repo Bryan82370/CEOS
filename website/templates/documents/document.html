@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+{% extends "base.html" %}
+{% load static %}
+<meta charset="utf-8" />
+{% block content %}
+<h1>Retouvez tous vos fichiers</h1>
+<ul>
+  <div>
+    <span> Name 1</span>
+    <span> Date 1</span>
+    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
+  </div>
+  <div>
+    <span> Name 2</span>
+    <span> Date 2</span>
+    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
+  </div>
+
+  <div>
+    <span> Name 3</span>
+    <span> Date 3</span>
+    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
+  </div>
+
+  <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/addDocument">Ajouter un fichiers</a>
+</ul>
+
+
+{% endblock %}
+
+</html>
