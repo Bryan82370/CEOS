@@ -48,13 +48,6 @@
         </div>
     </nav>
 
-    {% if user.is_authenticated %}
-        <h3>Bienvenue {{ user.username }}</h3>
-    {% endif %}
-    {% if not user.is_authenticated %}
-    <h3>Bienvenue à toi</h3>
-    {% endif %}
-
     {% endblock %}
     {% block content %}
     {% endblock %}

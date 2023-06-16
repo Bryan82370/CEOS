@@ -4,11 +4,17 @@
 {% load static %}
 <meta charset="utf-8" />
 {% block content %}
-
 <!-- login.html -->
 
+<div style="padding: 100px;">
+  <div style="background-color: rgb(255, 255, 255);">
+    <h2 style="text-align: center;">Connectez-vous</h2>
+    <h2 style="color: rgb(6, 6, 170); padding-left: 50%;">à votre</h2>
+    <h2 style="text-align: center;">espace</h2>
+  </div>
+</div>
 
-    <title>Connexion</title>
+    
 
 
 {% if form.non_field_errors %}
@@ -20,14 +26,40 @@
   {% endif %}
 
 <body>
-    <h2>Connexion aaaaa</h2>
-    <form method="POST" action="{% url 'user_login' %}">
+  <div style="padding-left: 20%; padding-right: 20%;">
+    <div style="background-color: rgb(233, 233, 233); padding: 10px; border-radius: 10px;">
+      <form method="POST" action="{% url 'user_login' %}">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Se connecter">
-    </form>
+          <div style="display: flex; flex-direction: row; padding: 5px;">
+            <div style="width: 30%;">
+              <span>Identifiant :</span>
+            </div>
+            <div style="width: 70%;">
+              {{ form.username }}
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: row; padding: 5px;">
+            <div style="width: 30%;">
+              <span>Mot de passe :</span>
+            </div>
+            <div style="width: 70%;">
+              {{ form.password }}
+            </div>
+          </div>
+
+        <div style="padding: 10px; text-align: center;">
+          <input style="width: 30%; border-radius: 20px;" type="submit" value="Se connecter">
+        </div>
+
+      </form>
+    </div>
+  </div>
+    
+    
 </body>
 
-{% endblock %}
 
+{% endblock %}
 </html>
+
