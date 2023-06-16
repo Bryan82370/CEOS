@@ -6,7 +6,7 @@
 {% block content %}
 <!-- register.html -->
 
-<div style="padding: 100px;">
+<div style="padding-left: 100px; padding-right: 100px; padding-top: 10px">
     <div style="background-color: rgb(255, 255, 255);">
         <h2 style="text-align: center;">Incrivez-vous et bénéficiez</h2>
         <h2 style="color: rgb(6, 6, 170); padding-left: 50%;">d'un suivi</h2>
@@ -14,15 +14,14 @@
     </div>
 </div>
 
-<div>
-    <div style="background-color: rgb(233, 233, 233); padding-left: 15%; padding-right: 15%; padding-bottom: 5%;">
+<div style="padding: 100px;">
+    <div style="background-color: rgb(233, 233, 233); padding-left: 15%; padding-right: 15%; padding-bottom: 1%; padding-top: 1%; border-radius: 10px;">
         <h6>Votre mot de passe ne peut pas être trop similaire à vos autres informations personnelles.</h6>
         <h6>Votre mot de passe doit contenir au moins 8 caractères.</h6>
         <h6>Votre mot de passe ne peut pas être un mot de passe couramment utilisé.</h6>
         <h6>Votre mot de passe ne peut pas être entièrement numérique</h6>
     </div>
 </div>
-    
     
 
 <body>
@@ -51,7 +50,7 @@
 
                       <div style="display: flex; flex-direction: row; padding: 5px;">
                         <div style="width: 30%;">
-                          <span>confirmation du mot de passe :</span>
+                          <span>Confirmation du mot de passe :</span>
                         </div>
                         <div style="width: 70%;">
                             {{ form.password2 }}
