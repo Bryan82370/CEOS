@@ -7,7 +7,7 @@
 <!-- login.html -->
 
 <div style="padding: 100px;">
-  <div style="background-color: rgb(255, 255, 255);">
+  <div style="background-color:  #FFF9F1;">
     <h2 style="text-align: center;">Connectez-vous</h2>
     <h2 style="color: rgb(6, 6, 170); padding-left: 50%;">à votre</h2>
     <h2 style="text-align: center;">espace</h2>
@@ -26,32 +26,45 @@
   {% endif %}
 
 <body>
-  <div style="padding-left: 20%; padding-right: 20%;">
-    <div style="background-color: rgb(233, 233, 233); padding: 10px; border-radius: 10px;">
+  <div style="padding-left: 30%; padding-right: 30%;">
+    <div style="background-color: #F5F5F5; padding: 10px; border-radius: 10px;">
+
+
       <form method="POST" action="{% url 'user_login' %}">
         {% csrf_token %}
-          <div style="display: flex; flex-direction: row; padding: 5px;">
-            <div style="width: 30%;">
-              <span>Identifiant :</span>
-            </div>
-            <div style="width: 70%;">
-              {{ form.username }}
-            </div>
-          </div>
-
-          <div style="display: flex; flex-direction: row; padding: 5px;">
-            <div style="width: 30%;">
-              <span>Mot de passe :</span>
-            </div>
-            <div style="width: 70%;">
-              {{ form.password }}
-            </div>
-          </div>
-
-        <div style="padding: 10px; text-align: center;">
-          <input style="width: 30%; border-radius: 20px;" type="submit" value="Se connecter">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" style="width: 70%;" for="form1Example1">Addresse mail</label>
+          {{ form.username }}
+          
         </div>
-
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" style="width: 70%;" for="form1Example1">Mot de passe</label>
+          {{ form.password }}
+        </div>
+      
+        <!-- 2 column grid layout for inline styling -->
+        <div class="row mb-4">
+          <div class="col d-flex justify-content-center">
+            <!-- Checkbox -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+              <label class="form-check-label" for="form1Example3"> Se souvenir de moi </label>
+            </div>
+          </div>
+      
+          <div class="col">
+            <!-- Simple link -->
+            <a href="#!">Mot de passe oublié?</a>
+          </div>
+        </div>
+      
+        <!-- Submit button -->
+        <div style="padding: 10px; text-align: center;">
+          <input class="btn btn-primary btn-block" style="width: 30%; border-radius: 20px;" type="submit" value="Se connecter">
+        </div>
       </form>
     </div>
   </div>

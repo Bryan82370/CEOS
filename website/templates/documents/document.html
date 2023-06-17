@@ -4,27 +4,29 @@
 {% load static %}
 <meta charset="utf-8" />
 {% block content %}
-<h1>Retouvez tous vos fichiers</h1>
-<ul>
-  <div>
-    <span> Name 1</span>
-    <span> Date 1</span>
-    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
+<div style="padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 20%;">
+  <div style="background-color: #FFF9F1;">
+      <h2 style="text-align: center;">Retouvez </h2>
+      <h2 style="color: rgb(6, 6, 170); padding-left: 49%;">tout</h2>
+      <h2 style="text-align: center;">vos fichiers </h2>
   </div>
-  <div>
-    <span> Name 2</span>
-    <span> Date 2</span>
+</div>
+
+<div style="background-color: #F5F5F5; ">
+
+  <div style="text-align: center;">
+    <span> Carte Identité</span>
+    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
+    <span> Bulletin de paie</span>
+    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
+    <span> Contrat de travail</span>
     <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
   </div>
 
-  <div>
-    <span> Name 3</span>
-    <span> Date 3</span>
-    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
-  </div>
+  <br />
+  <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%;" type="submit" href="/addDocument">Ajouter un fichiers</a>
 
-  <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/addDocument">Ajouter un fichiers</a>
-</ul>
+</div>
 
 
 {% endblock %}

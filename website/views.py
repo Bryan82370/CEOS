@@ -10,7 +10,7 @@ from django.views.decorators.cache import never_cache
 from django.views.decorators.cache import cache_control
 from django.core.cache import cache
 
-@login_required(login_url='choise')
+
 def index(request):
     return render(request, 'index.html')
 
@@ -42,7 +42,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('index')
+            return redirect('welcome')
     else:
         form = InscriptionForm()
     return render(request, 'security/register.html', {'form': form})
