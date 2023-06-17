@@ -4,7 +4,7 @@
 {% load static %}
 <meta charset="utf-8" />
 {% block content %}
-<div style="padding-left: 100px; padding-right: 100px; padding-top: 20px; ">
+<div style="padding-left: 100px; padding-right: 100px; padding-top: 20px;  ">
     <div style="background-color: #FFF9F1;">
         <h2 style="text-align: center;">L'historique </h2>
         <h2 style="color: rgb(6, 6, 170); padding-left: 49%;">de toutes</h2>
@@ -12,31 +12,17 @@
     </div>
 </div>
 
-<div class="container py-5 h-100" >
-    <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col col-lg-9 col-xl-7" >
+<div class="container py-5 ">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col col-lg-9 col-xl-7">
             <div class="card rounded-3">
-                <div class="card-body p-4" >
-
-
-                    <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
-                        <div class="col-12">
-                            <div class="form-outline">
-                                <input type="text" id="form1" class="form-control" />
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Ajouter</button>
-                        </div>
-                    </form>
+                <div class="card-body p-4">
 
                     <table class="table mb-4">
                         <thead>
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">Nom</th>
-                                <th scope="col">Statuts</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -44,68 +30,45 @@
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Passeport</td>
-                                <td>En cours</td>
                                 <td>
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
                                     <button type="submit" class="btn btn-success ms-1">Voir</button>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
-                                <td>Impôts</td>
-                                <td>Pas commencé</td>
+                                <td>Déménagement</td>
                                 <td>
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
                                     <button type="submit" class="btn btn-success ms-1">Voir</button>
                                 </td>
                             </tr>
+
                             <tr>
                                 <th scope="row">3</th>
-                                <td>Déménagement</td>
-                                <td>En cours</td>
-                                <td>
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                                    <button type="submit" class="btn btn-success ms-1">Voir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Prime d'activité</td>
-                                <td>Pas commencé</td>
-                                <td>
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                                    <button type="submit" class="btn btn-success ms-1">Voir</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
                                 <td>Bénévolat</td>
-                                <td>En cours</td>
                                 <td>
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
                                     <button type="submit" class="btn btn-success ms-1">Voir</button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                        <ul class="pagination">
-                          <li class="page-item">
+                    <ul class="pagination">
+                        <li class="page-item">
                             <a class="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
+                                <span aria-hidden="true">&laquo;</span>
                             </a>
-                          </li>
-                          <li class="page-item" ><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
                             <a class="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
+                                <span aria-hidden="true">&raquo;</span>
                             </a>
-                          </li>
-                        </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
