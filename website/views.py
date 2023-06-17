@@ -47,43 +47,46 @@ def register(request):
         form = InscriptionForm()
     return render(request, 'security/register.html', {'form': form})
 
-@login_required(login_url='choise')
+@login_required(login_url='index.html')
 def addCategory(request):
     return render(request, 'addCategory.html')
 
-@login_required(login_url='choise')
+@login_required(login_url='index.html')
 def addDocument(request):
     return render(request, 'documents/addDocument.html')
 
-@login_required(login_url='choise')
+@login_required(login_url='index.html')
 def document(request):
     return render(request, 'documents/document.html')
 
-@login_required(login_url='choise')
+@login_required(login_url='index.html')
 def step(request):
     return render(request, 'step.html')
 
-@login_required(login_url='choise')
+@login_required(login_url='index.html')
 def info(request):
     return render(request, 'info.html')
 
-@login_required(login_url='choise')
+@login_required(login_url='index.html')
 def about(request):
     return render(request, 'about.html')
 
-@login_required(login_url='choise')
+@login_required(login_url='index.html')
 def list(request):
     return render(request, 'list.html')
 
 def logout_view(request):
     logout(request)
     cache.clear()
-    return redirect('choise')
+    return redirect('index.html')
 
-@login_required(login_url='choise')
+@login_required(login_url='index.html')
 def welcome(request):
     return render(request, 'welcome.html')
 
-@login_required(login_url='choise')
+@login_required(login_url='index.html')
 def see_file(request):
     return render(request, 'documents/see_file.html')
+
+def nav(request):
+    return render(request, 'nav.html')
