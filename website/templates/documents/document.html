@@ -4,7 +4,7 @@
 {% load static %}
 <meta charset="utf-8" />
 {% block content %}
-<div style="padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 5%;">
+<div style="padding-left: 100px; padding-right: 100px; padding-top: 20px;">
   <div style="background-color: #FFF9F1;">
       <h2 style="text-align: center;">Retouvez </h2>
       <h2 style="color: rgb(6, 6, 170); padding-left: 49%;">tout</h2>
@@ -12,19 +12,87 @@
   </div>
 </div>
 
-<div style="background-color: #F5F5F5; ">
+<div class="container py-5 ">
+  <div class="row d-flex justify-content-center align-items-center">
+      <div class="col col-lg-9 col-xl-7">
+          <div class="card rounded-3">
+              <div class="card-body p-4">
+                  <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <input type="file" class="form-control" id="customFile" placeholder="Nouveau document"/>
+                      </div>
+                      </div>
 
-  <div style="text-align: center;">
-    <span> Carte Identité</span>
-    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
-    <span> Bulletin de paie</span>
-    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
-    <span> Contrat de travail</span>
-    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/see_file">Voir</a>
+                      <div class="col-12">
+                          <button type="submit" class="btn btn-primary">Ajouter</button>
+                      </div>
+                  </form>
+                  <table class="table mb-4">
+                      <thead>
+                          <tr>
+                              <th scope="col"></th>
+                              <th scope="col">Nom</th>
+                              <th scope="col">Date</th>
+                              <th scope="col">Actions</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Carte d'indentité</td>
+                              <td> 14/06/2020</td>
+                              <td>
+                                  <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                  <button type="submit" class="btn btn-danger ms-1">Supprimer</button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Bulletin de paie</td>
+                              <td> 04/08/2020</td>
+                              <td>
+                                  <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                  <button type="submit" class="btn btn-danger ms-1">Supprimer</button>
+
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <th scope="row">3</th>
+                              <td>Contart de travail</td>
+                              <td> 18/11/2021</td>
+
+                              <td>
+                                  <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                  <button type="submit" class="btn btn-danger ms-1">Supprimer</button>
+
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <div style="padding-left: 35%;">
+                      <ul class="pagination">
+                          <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                              </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+      </div>
   </div>
-
-  <br />
-  <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%;" type="submit" href="/addDocument">Ajouter un fichiers</a>
 
 </div>
 
