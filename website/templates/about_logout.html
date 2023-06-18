@@ -2,7 +2,7 @@
 <html lang="fr">
 {% extends "nav.html" %} {% load static %}
 <meta charset="utf-8" /> {% block content %}
-<div style="padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 2%; ">
+<div style="padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 2%;margin-top: 60px;">
     <div style="background-color: #FFF9F1;">
         <h2 style="text-align: center;">Un soucis ? Une question ? </h2>
         <h2 style="color: rgb(6, 6, 170); padding-left: 45%;">Contactez-nous</h2>
@@ -45,14 +45,15 @@
                         </div>
                         <br/>
                         <div class="mx-auto">
-                            <button type="submit" class="btn btn-primary text-right">Envoyer</button></div>
+                            <button type="submit" class="btn btn-dark" style="margin-left: 38%;width: 25%;">Envoyer</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
         <div class="col-12 col-sm-4">
             <div class="card bg-light mb-3">
-                <div class="card-header bg-success text-white">Informations :</div>
+                <div class="card-header bg-dark text-white">Informations :</div>
                 <div class="card-body">
                     <span>Rue : 10 rue Alain Savary</span>
                     <br/> <br/>
@@ -71,6 +72,33 @@
         </div>
     </div>
 </div>
+
+
+<style>
+    .footer {
+        margin-top: 123px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        background-color: #373e46;
+        text-align: center;
+    }
+</style>
+
+<footer class="page-footer footer font-small">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2023 Copyright :
+        <p style="margin-bottom: -5px;">TASKMASTER </p>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
 {% endblock %}
 
 </html>

@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
-{% extends "nav.html" %}
-{% load static %}
-<meta charset="utf-8" />
-{% block content %}
+{% extends "nav.html" %} {% load static %}
+<meta charset="utf-8" /> {% block content %}
 
-
-  <div style="background-color: rgb(149, 137, 255);">
-    <h1 style="text-align: center; padding-top: 2%; padding-bottom: 2%;">CEOS</h1>
-  </div>
-  
-  <div style="padding-bottom: 5%; padding-top: 5%;">
-    <h5 style="padding-left: 20%; padding-right: 20%;">Problématique de l’application :</h5>
-
-    <div style="padding-top: 1%;">
-      <span style="padding-left: 22%; padding-right: 22%;">Manque de formation pour réaliser les démarches administratives. </span>
+<div id="carouselExampleSlidesOnly" class="carousel slide" style="margin-top: 5px;" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{% static '/img/work5.jpg' %}" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <blockquote class="blockquote text-center">
+                    <h2 class="mb-0" style="margin-bottom: 100px;">"La raison d'être d'une organisation est de permettre à des gens ordinaires de faire des choses extraordinaires."</h2>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <footer class="blockquote-footer" style="margin-bottom: 225px;font-size: x-large;">Peter Drucker</footer>
+                </blockquote>
+            </div>
+        </div>
     </div>
+</div>
 
-    <div style="padding-top: 1%;">
-      <span style="padding-left: 22%; padding-right: 22%;">S’installer en France nécessite un minimum de connaissance</span>
+<div class="jumbotron jumbotron-fluid" style="margin-top: 100px;">
+    <div class="container">
+        <h1 class="display-4" style="text-align:center;">Pourquoi utiliser TASKMASTER ?</h1>
+        <br/>
+        <br/>
+        <p class="lead" style="text-align:justify;">TaskMaster est une application web novatrice conçue pour simplifier votre vie en organisant efficacement vos papiers et démarches administratives. Que vous soyez un particulier débordé par les factures et les formulaires ou une entreprise qui
+            souhaite rationaliser ses processus internes, TaskMaster est là pour vous aider. L'application offre une interface conviviale et intuitive, vous permettant de numériser et de stocker facilement tous vos documents importants, tels que les contrats,
+            les factures, les relevés bancaires, et bien plus encore. Grâce à des fonctionnalités avancées de recherche et de tri, vous pouvez retrouver rapidement les documents dont vous avez besoin, sans perdre de temps à fouiller dans des classeurs
+            physiques ou des piles de papiers. TaskMaster propose également des rappels intelligents pour vous alerter des échéances importantes, telles que les dates de paiement ou les renouvellements de contrats. Vous pouvez même partager des documents
+            en toute sécurité avec d'autres utilisateurs, ce qui facilite la collaboration et l'échange d'informations. Avec TaskMaster, la gestion de vos papiers et démarches administratives devient plus efficace, vous permettant de gagner du temps,
+            de réduire le stress et d'être plus organisé au quotidien.</p>
     </div>
-    <div>
-      <span style="padding-left: 22%; padding-right: 22%;">afin de prendre son premier logement etc,</span>
-    </div>
-    <div>
-      <span style="padding-left: 22%; padding-right: 22%;">ce qui rend l’insertion difficile et l’installation compliquée.</span>
-    </div>
-
-    <div style="padding-top: 1%;"> 
-      <span style="padding-left: 22%; padding-right: 22%;">Réaliser des démarches administratives peut être fastidieux pour tout un chacun.</span>  
-    </div> 
-    <div> 
-      <span style="padding-left: 22%; padding-right: 22%;">Non seulement faut-il saisir les documents inhérents à tout changement de situation,</span>  
-    </div> 
-    <div> 
-      <span style="padding-left: 22%; padding-right: 22%;">mais leur accès n’est pas toujours aisé.</span>  
-    </div> 
-    <div style="padding-top: 1%;"> 
-      <span style="padding-left: 22%; padding-right: 22%;">Dans la vie quotidienne,</span>  
-    </div> 
-    <div> 
-      <span style="padding-left: 22%; padding-right: 22%;">de nombreux éléments peuvent nécessiter des démarches correspondantes.</span>  
-    </div> 
-    <div>
-      <span style="padding-left: 22%; padding-right: 22%;">Recrutement, vie familiale, décès, naissance, mariage, circulation routière,</span>
-    </div>
-    <div>
-      <span style="padding-left: 22%; padding-right: 22%;">déménagement ou investissement immobilier : </span>
-    </div>
-    <div>
-      <span style="padding-left: 22%; padding-right: 22%;">autant de situations qui impliquent la production de documents légaux et authentiques.</span>
-    </div>
-  </div>
-
-  <div style="background-color: rgb(149, 137, 255);">
-    <img style="padding: 5%;" src="./images/documents.JPG">
-  </div>
-  
+</div>
 
 
+<!-- Footer -->
 
+
+<style>
+    .footer {
+        margin-top: 100px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        background-color: #373e46;
+        text-align: center;
+    }
+</style>
+
+<footer class="page-footer footer font-small">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2023 Copyright :
+        <p style="margin-bottom: -5px;">TASKMASTER </p>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
 {% endblock %}
+
 
 </html>

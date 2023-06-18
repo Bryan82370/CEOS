@@ -1,78 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
-  {% extends "nav.html" %}
-{% load static %}
-<meta charset="utf-8" />
-{% block content %}
+{% extends "nav.html" %} {% load static %}
+<meta charset="utf-8" /> {% block content %}
 <!-- login.html -->
 
 <div style="padding: 100px;">
-  <div style="background-color:  #FFF9F1;">
-    <h2 style="text-align: center;">Connectez-vous</h2>
-    <h2 style="color: rgb(6, 6, 170); padding-left: 50%;">à votre</h2>
-    <h2 style="text-align: center;">espace</h2>
-  </div>
+    <div style="background-color:  #FFF9F1;">
+        <h2 style="text-align: center;">Connectez-vous</h2>
+        <h2 style="color: rgb(6, 6, 170); padding-left: 50%;">à votre</h2>
+        <h2 style="text-align: center;">espace</h2>
+    </div>
 </div>
 
-    
+
 
 
 {% if form.non_field_errors %}
-    <ul class="errorlist">
-      {% for error in form.non_field_errors %}
-        <li>{{ error }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+<ul class="errorlist">
+    {% for error in form.non_field_errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
 
 <body>
-  <div style="padding-left: 30%; padding-right: 30%;">
-    <div style="background-color: #F5F5F5; padding: 10px; border-radius: 10px;">
+    <div style="padding-left: 30%; padding-right: 30%;">
+        <div style="background-color: #F5F5F5; padding: 10px; border-radius: 10px;">
 
 
-      <form method="POST" action="{% url 'user_login' %}">
-        {% csrf_token %}
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <label class="form-label" style="width: 70%;" for="form1Example1">Addresse mail</label>
-          {{ form.username }}
-          
+            <form method="POST" action="{% url 'user_login' %}">
+                {% csrf_token %}
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" style="width: 70%;" for="form1Example1">Addresse mail</label> {{ form.username }}
+
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" style="width: 70%;" for="form1Example1">Mot de passe</label> {{ form.password }}
+                </div>
+
+                <!-- 2 column grid layout for inline styling -->
+                <div class="row mb-4">
+                    <div class="col d-flex justify-content-center">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                            <label class="form-check-label" for="form1Example3"> Se souvenir de moi </label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <!-- Simple link -->
+                        <a href="#!">Mot de passe oublié?</a>
+                    </div>
+                </div>
+
+                <!-- Submit button -->
+                <div style="padding: 10px; text-align: center;">
+                    <input class="btn btn-dark btn-block" style="width: 30%; border-radius: 20px;" type="submit" value="Se connecter">
+                </div>
+            </form>
         </div>
-      
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-          <label class="form-label" style="width: 70%;" for="form1Example1">Mot de passe</label>
-          {{ form.password }}
-        </div>
-      
-        <!-- 2 column grid layout for inline styling -->
-        <div class="row mb-4">
-          <div class="col d-flex justify-content-center">
-            <!-- Checkbox -->
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-              <label class="form-check-label" for="form1Example3"> Se souvenir de moi </label>
-            </div>
-          </div>
-      
-          <div class="col">
-            <!-- Simple link -->
-            <a href="#!">Mot de passe oublié?</a>
-          </div>
-        </div>
-      
-        <!-- Submit button -->
-        <div style="padding: 10px; text-align: center;">
-          <input class="btn btn-primary btn-block" style="width: 30%; border-radius: 20px;" type="submit" value="Se connecter">
-        </div>
-      </form>
     </div>
-  </div>
-    
-    
+
+
 </body>
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        background-color: #373e46;
+        text-align: center;
+    }
+</style>
 
+<footer class="page-footer footer font-small">
 
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2023 Copyright :
+        <p style="margin-bottom: -5px;">TASKMASTER </p>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 {% endblock %}
-</html>
 
+</html>

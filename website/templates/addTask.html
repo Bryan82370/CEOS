@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+{% extends "base.html" %} {% load static %}
+<meta charset="utf-8" /> {% block content %}
+<!-- register.html -->
+
+<div style="padding-left: 100px; padding-right: 100px; padding-top: 10px; padding-bottom: 5%;margin-top: 10px;">
+    <div style="background-color:  #FFF9F1;">
+        <h2 style="text-align: center;">Créer une </h2>
+        <h2 style="color: rgb(6, 6, 170); padding-left: 50%;">nouvelle</h2>
+        <h2 style="text-align: center;">tâche</h2>
+    </div>
+</div>
+
+
+<body>
+    <div style="padding-left: 20%; padding-right: 20%; padding-top: 10px;">
+        <div style="background-color: #F5F5F5; padding: 10px; border-radius: 10px;">
+
+            <form method="POST" href="/document">
+                {% csrf_token %}
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" style="width: 70%;" for="form1Example1">Nom de la Tâche</label>
+                    <input type="email" id="form1Example1" class="form-control" />
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" style="width: 70%;" for="form1Example1">Description</label>
+                    <input type="email" id="form1Example1" class="form-control" />
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" style="width: 70%;" for="form1Example1">Rattacher à la démarche</label>
+                    <input type="email" id="form1Example1" class="form-control" />
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="customFile">Fichier</label>
+                    <input type="file" class="form-control" id="customFile" />
+                </div>
+
+                <!-- Submit button -->
+                <div style="padding: 10px; text-align: center;">
+                    <input class="btn btn-dark btn-block" style="width: 30%; border-radius: 20px;margin-right: 5px;" type="submit" href="/document" value="Ajouter">
+                    <input class="btn btn-dark btn-block" style="width: 30%; border-radius: 20px;margin-left: 5px;" type="submit" href="/document" value="Annuler">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
+
+</html>
