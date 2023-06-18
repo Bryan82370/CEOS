@@ -71,6 +71,9 @@ def info(request):
 def about(request):
     return render(request, 'about.html')
 
+def about_logout(request):
+    return render(request, 'about_logout.html')
+
 @login_required(login_url='index.html')
 def list(request):
     return render(request, 'list.html')

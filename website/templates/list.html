@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-{% extends "base.html" %}
-{% load static %}
-<meta charset="utf-8" />
-{% block content %}
+{% extends "base.html" %} {% load static %}
+<meta charset="utf-8" /> {% block content %}
 <div style="padding-left: 100px; padding-right: 100px; padding-top: 20px;">
     <div style="background-color: #FFF9F1;">
         <h2 style="text-align: center;">Bénéficier d'un </h2>
@@ -19,16 +17,9 @@
             <div class="card rounded-3">
                 <div class="card-body p-4">
 
-
                     <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
                         <div class="col-12">
-                            <div class="form-outline">
-                                <input type="text" id="form1" class="form-control" placeholder="Nouvelle tâche" />
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Ajouter</button>
+                            <a type="submit" class="btn btn-primary" href="/addTask">Créer une nouvelle tâche </a>
                         </div>
                     </form>
 
@@ -47,8 +38,9 @@
                                 <td>Passeport</td>
                                 <td>En cours</td>
                                 <td>
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                                    <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                    <button type="submit" class="btn btn-outline-success">Voir</button>
+                                    <button type="submit" class="btn btn-outline-warning">Modifier</button>
+                                    <button type="submit" class="btn btn-outline-danger">Supprimer</button>
                                 </td>
                             </tr>
                             <tr>
@@ -56,8 +48,9 @@
                                 <td>Impôts</td>
                                 <td>Pas commencé</td>
                                 <td>
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                                    <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                    <button type="submit" class="btn btn-outline-success">Voir</button>
+                                    <button type="submit" class="btn btn-outline-warning">Modifier</button>
+                                    <button type="submit" class="btn btn-outline-danger">Supprimer</button>
                                 </td>
                             </tr>
                             <tr>
@@ -65,8 +58,9 @@
                                 <td>Déménagement</td>
                                 <td>En cours</td>
                                 <td>
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                                    <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                    <button type="submit" class="btn btn-outline-success">Voir</button>
+                                    <button type="submit" class="btn btn-outline-warning">Modifier</button>
+                                    <button type="submit" class="btn btn-outline-danger">Supprimer</button>
                                 </td>
                             </tr>
                             <tr>
@@ -74,8 +68,9 @@
                                 <td>Prime d'activité</td>
                                 <td>Pas commencé</td>
                                 <td>
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                                    <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                    <button type="submit" class="btn btn-outline-success">Voir</button>
+                                    <button type="submit" class="btn btn-outline-warning">Modifier</button>
+                                    <button type="submit" class="btn btn-outline-danger">Supprimer</button>
                                 </td>
                             </tr>
                             <tr>
@@ -83,8 +78,9 @@
                                 <td>Bénévolat</td>
                                 <td>En cours</td>
                                 <td>
-                                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                                    <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                    <button type="submit" class="btn btn-outline-success">Voir</button>
+                                    <button type="submit" class="btn btn-outline-warning">Modifier</button>
+                                    <button type="submit" class="btn btn-outline-danger">Supprimer</button>
                                 </td>
                             </tr>
                         </tbody>

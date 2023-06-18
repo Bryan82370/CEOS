@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-{% extends "base.html" %}
-{% load static %}
-<meta charset="utf-8" />
-{% block content %}
+{% extends "base.html" %} {% load static %}
+<meta charset="utf-8" /> {% block content %}
 <div style="padding-left: 100px; padding-right: 100px; padding-top: 20px;  ">
     <div style="background-color: #FFF9F1;">
         <h2 style="text-align: center;">L'historique </h2>
@@ -19,13 +17,7 @@
                 <div class="card-body p-4">
                     <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
                         <div class="col-12">
-                            <div class="form-outline">
-                                <input type="text" id="form1" class="form-control" placeholder="Nouvelle démarche" />
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Créer</button>
+                            <a type="submit" class="btn btn-primary" href="/addDemarche">Créer une nouvelle démarche</a>
                         </div>
                     </form>
                     <table class="table mb-4">
@@ -41,14 +33,18 @@
                                 <th scope="row">1</th>
                                 <td>Passeport</td>
                                 <td>
-                                    <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                    <button type="submit" class="btn btn-outline-success">Voir</button>
+                                    <button type="submit" class="btn btn-outline-warning">Modifier</button>
+                                    <button type="submit" class="btn btn-outline-danger">Supprimer</button>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td>Déménagement</td>
                                 <td>
-                                    <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                    <button type="submit" class="btn btn-outline-success">Voir</button>
+                                    <button type="submit" class="btn btn-outline-warning">Modifier</button>
+                                    <button type="submit" class="btn btn-outline-danger">Supprimer</button>
                                 </td>
                             </tr>
 
@@ -56,7 +52,9 @@
                                 <th scope="row">3</th>
                                 <td>Bénévolat</td>
                                 <td>
-                                    <button type="submit" class="btn btn-success ms-1">Voir</button>
+                                    <button type="submit" class="btn btn-outline-success">Voir</button>
+                                    <button type="submit" class="btn btn-outline-warning">Modifier</button>
+                                    <button type="submit" class="btn btn-outline-danger">Supprimer</button>
                                 </td>
                             </tr>
                         </tbody>

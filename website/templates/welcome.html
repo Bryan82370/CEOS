@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %}
 
-<meta charset="utf-8" />
-{% block content %}
+<meta charset="utf-8" /> {% block content %}
 
 <div style="padding-left: 100px; padding-right: 100px; padding-top: 20px; padding-bottom: 5%;">
-  <div style="background-color: rgb(255, 249, 241);">
-    <h2 style="text-align: center;">Bonjour</h2>
-    <h2 style="color: rgb(6, 6, 170); padding-left: 49%;">{{ user.username }}</h2>
-  </div>
+    <div style="background-color: rgb(255, 249, 241);">
+        <h2 style="text-align: center;">Bonjour</h2>
+        <h2 style="color: rgb(6, 6, 170); padding-left: 49%;">{{ user.username }}</h2>
+    </div>
 </div>
 
 <div style="background-color: rgb(255, 249, 241); padding-left: 20%; padding-right: 20%;">
-  <div class="input-group rounded">
-    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-      aria-describedby="search-addon" />
-    <span class="input-group-text border-0" id="search-addon">
-      <i class="fas fa-search"></i>
-    </span>
-  </div>
+    <div class="input-group rounded">
+        <input class="form-control me-sm-2" type="search" placeholder="Rechercher">
+        <button class="btn btn-secondary my-2 my-sm-0 rounded" type="submit">Rechercher</button>
+    </div>
 
-  <div style="background-color: rgb(255, 249, 241); padding-top: 2%; text-align: center;">
-    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/document">Mes
+    <div style="background-color: rgb(255, 249, 241); padding-top: 2%; text-align: center;">
+        <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/document">Mes
       fichiers</a><i class="bi bi-card-list"></i>
-    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/step">Mes
+        <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/step">Mes
       démarches</a><i class="bi bi-card-list"></i>
-    <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/list">Mes tâches en
+        <a class="btn btn-outline-success my-2 my-sm-0" style="margin-right:2%" type="submit" href="/list">Mes tâches en
       cours</a><i class="bi bi-card-checklist"></i>
-  </div>
+    </div>
 
 </div>
 
