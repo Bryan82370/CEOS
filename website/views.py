@@ -56,6 +56,14 @@ def addDocument(request):
     return render(request, 'documents/addDocument.html')
 
 @login_required(login_url='index.html')
+def addTask(request):
+    return render(request, 'addTask.html')
+
+@login_required(login_url='index.html')
+def addDemarche(request):
+    return render(request, 'addDemarche.html')
+
+@login_required(login_url='index.html')
 def document(request):
     return render(request, 'documents/document.html')
 
