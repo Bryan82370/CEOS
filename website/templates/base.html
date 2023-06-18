@@ -12,39 +12,66 @@
 
 <body style="background-color: rgb(255, 249, 241);">
     {% block sidebar %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/welcome">TASKMASTER</a>
+    <nav class="navbar navbar-expand-lg float-right" style="background-color: #FFF9F1;">
+        <div class="container-fluid" style="background-color: #FFF9F1;margin-left:10px;">
+            <a class="navbar-brand" href="/welcome"><strong>TASKMASTER</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
             <div class="collapse navbar-collapse" id="navbarColor03">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
                         <a class="nav-link" href="/document" role="button" aria-haspopup="true" aria-expanded="false">Mes Fichiers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/step" role="button" aria-haspopup="true" aria-expanded="false">Mes Démarches</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="/list" role="button" aria-haspopup="true" aria-expanded="false">Mes tâches</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/info" role="button" aria-haspopup="true" aria-expanded="false">Mon Compte</a>
-                    </li>
-                    <li class="nav-item ">
                         <a class="nav-link" href="/about" role="button" aria-haspopup="true" aria-expanded="false">Nous Contacter</a>
                     </li>
                 </ul>
 
-                <form class="d-flex">
-                    <a class="btn btn-danger my-2 my-sm-0" href="{% url 'index' %}">Déconnexion</a>
+                <form class="d-flex" style="margin-right:10px;">
+                    <a class="btn btn-outline-dark my-2 my-sm-0" href="{% url 'index' %}">Déconnexion</a>
                 </form>
+                <a href="/info">
+                    <img src="{% static '/img/profil.png' %}" style="width: 50px;height:auto;margin-top: 2px;" alt="My image">
+                </a>
             </div>
         </div>
     </nav>
 
-    {% endblock %} {% block content %} {% endblock %} {% block footer %} {% endblock %}
+    {% endblock %} {% block content %} {% endblock %} {% block footer %}
+    <!-- Footer -->
+
+
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            background-color: #373e46;
+            text-align: center;
+        }
+    </style>
+
+    <footer class="page-footer footer font-small">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2023 Copyright :
+            <p style="margin-bottom: -5px;">TASKMASTER </p>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+    {% endblock %}
 </body>
 
 </html>

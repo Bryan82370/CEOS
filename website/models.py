@@ -4,6 +4,7 @@ from django.contrib.auth.hashers import check_password
 class Utilisateur(models.Model):
     username = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
+    todolist = models.TextField()
 
     def __str__(self):
         return self.username

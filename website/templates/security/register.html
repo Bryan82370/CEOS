@@ -1,77 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
-  {% extends "nav.html" %}
-{% load static %}
-<meta charset="utf-8" />
-{% block content %}
+{% extends "nav.html" %} {% load static %}
+<meta charset="utf-8" /> {% block content %}
 <!-- register.html -->
 
 <div style="padding-left: 100px; padding-right: 100px; padding-top: 10px">
-  <div style="background-color:  #FFF9F1;">
-    <h2 style="text-align: center;">Incrivez-vous et bénéficiez</h2>
-    <h2 style="color: rgb(6, 6, 170); padding-left: 50%;">d'un suivi</h2>
-    <h2 style="text-align: center; padding-left: 25%;">personnalisé</h2>
-  </div>
+    <div style="background-color:  #FFF9F1;">
+        <h2 style="text-align: center;">Incrivez-vous et bénéficiez</h2>
+        <h2 style="color: rgb(6, 6, 170); padding-left: 50%;">d'un suivi</h2>
+        <h2 style="text-align: center; padding-left: 25%;">personnalisé</h2>
+    </div>
 </div>
 
 <div style="padding: 100px;">
-  <div
-    style="background-color: #F5F5F5; padding-left: 15%; padding-right: 15%; padding-bottom: 1%; padding-top: 1%; border-radius: 10px;">
-    <h6>Votre mot de passe ne peut pas être trop similaire à vos autres informations personnelles.</h6>
-    <h6>Votre mot de passe doit contenir au moins 8 caractères.</h6>
-    <h6>Votre mot de passe ne peut pas être un mot de passe couramment utilisé.</h6>
-    <h6>Votre mot de passe ne peut pas être entièrement numérique</h6>
-  </div>
+    <div style="background-color: #F5F5F5; padding-left: 15%; padding-right: 15%; padding-bottom: 1%; padding-top: 1%; border-radius: 10px;">
+        <h6>Votre mot de passe ne peut pas être trop similaire à vos autres informations personnelles.</h6>
+        <h6>Votre mot de passe doit contenir au moins 8 caractères.</h6>
+        <h6>Votre mot de passe ne peut pas être un mot de passe couramment utilisé.</h6>
+        <h6>Votre mot de passe ne peut pas être entièrement numérique</h6>
+    </div>
 </div>
 
 
 <body>
-  <div style="padding-left: 20%; padding-right: 20%;">
-    <div style="background-color: #F5F5F5; padding: 10px; border-radius: 10px;">
+    <div style="padding-left: 20%; padding-right: 20%;">
+        <div style="background-color: #F5F5F5; padding: 10px; border-radius: 10px;">
 
-      <form method="POST" action="{% url 'register' %}">
-        {% csrf_token %}
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <label class="form-label" style="width: 70%;" for="form1Example1">Addresse mail</label>
-          {{ form.username }}
+            <form method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" style="width: 70%;" for="form1Example1">Addresse mail</label> {{ form.username }}
 
-        </div>
+                </div>
 
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-          <label class="form-label" style="width: 70%;" for="form1Example1">Mot de passe</label>
-          {{ form.password1 }}
-        </div>
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" style="width: 70%;" for="form1Example1">Mot de passe</label> {{ form.password1 }}
+                </div>
 
-        <div class="form-outline mb-4">
-          <label class="form-label" style="width: 70%;" for="form1Example1">Confirmation du mot de passe</label>
-          {{ form.password2 }}
-        </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" style="width: 70%;" for="form1Example1">Confirmation du mot de passe</label> {{ form.password2 }}
+                </div>
 
-        <div class="form-check d-flex justify-content-center mb-5">
-          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-          <label class="form-check-label" for="form2Example3g">
+                <div class="form-check d-flex justify-content-center mb-5">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                    <label class="form-check-label" for="form2Example3g">
             Je confirme avoir lu et compris les <a href="#!" class="text-body"><u>terms & conditions.</u></a>
           </label>
+                </div>
+
+                <!-- Submit button -->
+                <div style="padding: 10px; text-align: center;">
+                    <input class="btn btn-dark btn-block" style="width: 30%; border-radius: 20px;" type="submit" value="S'inscrire">
+                </div>
+            </form>
+
+
+
+
         </div>
-
-        <!-- Submit button -->
-        <div style="padding: 10px; text-align: center;">
-          <input class="btn btn-primary btn-block" style="width: 30%; border-radius: 20px;" type="submit" value="S'inscrire">
-      </div>
-      </form>
-
-
-
 
     </div>
 
-  </div>
-
 </body>
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        background-color: #373e46;
+        text-align: center;
+    }
+</style>
 
+<footer class="page-footer footer font-small">
 
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2023 Copyright :
+        <p style="margin-bottom: -5px;">TASKMASTER </p>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 {% endblock %}
 
 </html>
